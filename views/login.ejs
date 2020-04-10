@@ -1,0 +1,16 @@
+<%- include("./partials/header")%>
+<h1 class="text-center">Login Form</h1>
+<div class="container" style="width:30%; margin:24px auto;">
+<div class="row">
+<form action="/login" method="POST">
+	<label for="usr">UserName:</label>
+	<div id="usr" class="form-group"><input class="form-control" type="text" name="username" placeholder="username" required></div>
+	<label for="pwd">Password:</label>
+	<div id="pwd" class="form-group"><input class="form-control" type="password" name="password" placeholder="password" required></div>
+	<div class="form-group text-center"><a href="/forgot">Forget Password?</a></div>
+	<div class="form-group"><button type="submit" class="btn btn-primary form-control">Submit</button></div>
+</form>	
+</div>
+</div>
+
+<%- include("./partials/footer")%>

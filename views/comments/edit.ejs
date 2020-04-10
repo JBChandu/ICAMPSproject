@@ -1,0 +1,18 @@
+<%-include("../partials/header")%>
+<h1 class="text-center">Edit Comments</h1>
+<div class="container" style="width:30%; margin:24px auto;">
+<div class="row">
+<form action="/campGrounds/<%=camp_id%>/comments/<%=comment._id%>?_method=PUT" method="POST">
+	<div class="form-group">
+		<input class="form-control" type="text" name="comment[text]" value="<%=comment.text%>">	
+	</div>		
+	<button class="btn btn-lg btn-primary btn-block">
+		submit
+	</button>
+	
+</form>
+</div>
+<center><a href="/campGrounds" class="text-center">see all camps and make comment</a></center>
+</div>
+
+<%-include("../partials/footer")%>

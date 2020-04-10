@@ -1,0 +1,29 @@
+<%-include("../partials/header")%>
+<h1 class="text-center">New POST</h1>
+<div class="container" style="width:30%; margin:24px auto;">
+<div class="row">
+<form action="/campGrounds" method="POST" enctype="multipart/form-data">
+	<div class="form-group">
+		<input class="form-control" type="text" name="campground[name]" placeholder="name">	
+	</div>
+	<div class="form-group">
+         <label for="image">Image</label>
+         <input type="file" id="image" name="image" accept="image/*" required>
+    </div>
+	
+	<div class="form-group">
+		<input class="form-control" type="text" name="campground[description]" placeholder="description....">
+	</div>
+	<div class="form-group">
+		<input class="form-control" type="number" name="campground[price]" placeholder="Ratings(1-5)" min="1" step="1" max="5">	
+	</div>
+	<button class="btn btn-lg btn-primary btn-block">
+		submit
+	</button>
+	
+</form>
+</div>
+<center><a href="/campGrounds" class="text-center">see existing camp</a></center>
+</div>
+
+<%-include("../partials/footer")%>

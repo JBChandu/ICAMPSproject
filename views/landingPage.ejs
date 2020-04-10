@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ICAMPS</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" 				integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" href="/stylesheets/landing.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async>			</script>
+	</head>
+	<body>
+		<div class="container">
+		<%if(error && error.length>0){%>
+		<div class="alert alert-danger" role="alert"><%=error%></div>
+		<%}%>
+		<%if(success && success.length>0){%>
+		<div class="alert alert-success" role="alert"><%=success%></div>
+		<%}%>
+		<%if(warning && warning.length>0){%>
+		<div class="alert alert-warning" role="alert"><%=warning%></div>
+		<%}%>
+	</div>
+
+	<div id="landing-header">
+		<h1>Images_CAmps_Movies_&_PostS!</h1>
+		<a href="/campGrounds" class="btn btn-lg btn-success">View All Posts</a>
+		<p>
+		<form action="/campGrounds" method="GET" class="form-inline">
+		<div class="form-group">
+			<input class="form-control" type="text" name="search" placeholder="Enter post name...">
+			<input type="submit" value="search" class="btn btn-default">
+		</div>
+		</form></p>
+	</div>
+	<ul class="slideshow">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+<%- include ("partials/footer") %>
+
+	
+

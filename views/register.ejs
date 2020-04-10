@@ -1,0 +1,39 @@
+<%- include("./partials/header")%>
+<h1 class="text-center">Register/Sign-Up Form</h1>
+<div class="container" style="width:30%; margin:24px auto;">
+<div class="row">
+<form action="/register" method="POST" check form>
+	<label for="usr">UserName:</label>
+	<div id="usr" class="form-group"><input class="form-control" type="text" name="username" placeholder="username" required></div>
+	<label for="pwd">Password:</label>
+	<div id="pwd" class="form-group"><input class="form-control" type="password" name="password" placeholder="password" minlength="8" title="Password must have more than 8 characters" required ></div>
+	
+	  			<div class="form-group">
+					<label for="fs">Firstname:</label>
+                    <input id="fs" class="form-control" type="text" name="firstName" placeholder="first name">
+                </div>
+                <div class="form-group">
+					<label for="ls">Lastname:</label>
+                    <input id="ls" class="form-control" type="text" name="lastName" placeholder="last name">
+                </div>
+                <div class="form-group">
+					<label for="mail">Email:</label>
+                    <input id="mail" class="form-control" type="email" name="email" placeholder="email">
+                </div>
+                <div class="form-group">
+					<label for="avtr">Avatar:</label>
+                    <input id="avtr" class="form-control" type="text" name="avatar" placeholder="avatar url">
+					<a class="pull-right" style="margin-top:5px;" href="https://vinicius73.github.io/gravatar-url-generator/#/?ref=madewithvuejs.com">Avatar URL Generator</a>
+                </div>
+	
+	
+		<label for="adm">AdminCode:</label><br/>
+	<div id="adm" class="form-group"><input class="form-control" type="text" name="admincode" placeholder="admin code">
+	</div>
+	<div class="form-group"><button type="submit" class="btn btn-primary form-control">Submit</button></div>
+</form>
+</div>
+</div>
+
+
+<%- include("./partials/footer")%>

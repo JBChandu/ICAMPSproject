@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>ICAMPS</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+		<link rel="stylesheet" href="/stylesheets/app.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+		
+		<style>
+		font-family: 'Roboto', sans-serif;	
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="/"><i class="fa fa-cloud" aria-hidden="true"> ICAMPS   </i></a>
+		<a class="navbar-brand" href="/campGrounds"><i class="fa fa-home" aria-hidden="true"> Home</i></a>
+
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>	
+	</div>
+			
+			
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		<ul class="nav navbar-nav navbar-right" style="color:white;">
+			<%if(!currentUser){%>
+			<li><a href="/login"><i class="fas fa-sign-in-alt"> Log-In</i></a></li>
+			<li><a href="/register"><i class="fa fa-user-plus" aria-hidden="true"> Sign-Up</i></a></li>
+			<%}else{%>
+			<li><a href="#"><i class="fa fa-user-circle" aria-hidden="true"> USER:logged-in:<%=currentUser.username%></i></a></li>
+			<li><a href="/logout"><i class="fas fa-sign-out-alt" aria-hidden="true"> Log-Out</i></a></li>	
+			<%}%>
+		</ul>
+	</div>
+</nav>
+	<div class="container">
+		<%if(error && error.length>0){%>
+		<div class="alert alert-danger" role="alert"><%=error%></div>
+		<%}%>
+		<%if(success && success.length>0){%>
+		<div class="alert alert-success" role="alert"><%=success%></div>
+		<%}%>
+		<%if(warning && warning.length>0){%>
+		<div class="alert alert-warning" role="alert"><%=warning%></div>
+		<%}%>
+	</div>
+	

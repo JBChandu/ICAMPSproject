@@ -1,0 +1,63 @@
+<%-include("../partials/header")%>
+<div class="container">
+	<header class="jumbotron">
+		<h1>
+			<i class="fas fa-camera-retro">  ICAMPS</i>
+		</h1>
+		<hr>
+		<p>
+			Add Your Posts,It may be Images,Perfect clicks of Your Memories,Movies or Professionals You Like and so on....
+		</p>
+		<div class="form-group">
+			<a href="/campGrounds/new" class="btn btn-primary form control">Add NEW POST</a>
+		</div>	
+		</header>	
+
+
+	<div class="row text-center" style="display:flex; flex-wrap:wrap;">
+		<div class="col-md-12">
+		<%if(nomatch !== null){%>
+		<h2><%= nomatch %></h2>
+		<p>
+			<form action="/campGrounds" method="GET" class="form-inline">
+			<div class="form-group">
+			<input class="form-control" type="text" name="search" placeholder="Enter the postname to be searched...">
+			<input type="submit" value="search" class="btn btn-default">
+			</div>
+			</form>
+		</p>
+		<%}%>
+		</div>	
+		<% campGrounds.forEach(function(camps){%>
+		<div class="col-md-3 col-sm-6">
+				<div class="thumbnail">
+					<img src="<%=camps.image%>">
+					<div class="caption">
+						<h4><%=camps.name%></h4>
+						 <div>
+						   <span class="badge label-primary"><i class="fas fa-thumbs-up"></i> <%= camps.likes.length %></span>
+					   </div>
+					</div>
+					<a style="margin-bottom:10px;" href="/campGrounds/<%=camps._id%>" class="btn btn-primary">more Info...</a>
+			<!-- like button	 -->
+			
+			<!-- <div class="thumbnail">
+				   <img src="<%= camps.image %>">
+				   <div class="caption">
+					   <h4><%= camps.name %></h4>
+					   <div>
+						   <span class="badge label-primary"><i class="fas fa-thumbs-up"></i> <%= camps.likes.length %></span>
+					   </div>
+				   </div>
+				   <p>
+					   <a href="/campgrounds/<%= camps._id %>" class="btn btn-primary">More Info</a>
+				   </p>
+			</div> -->
+					
+					
+			</div>	
+		</div>
+		<%});%>	
+	</div>
+</div>
+<%- include("../partials/footer")%>

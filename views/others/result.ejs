@@ -1,0 +1,29 @@
+<%-include("../partials/bootstrap4")%>
+<style>
+	.thumbnail{
+		float: left;
+	}
+</style>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4 text-center">Results For Your Search</h1>
+    <p class="lead text-center"><a href="/search" class="btn btn-primary">Go Back To Search</a></p>
+  </div>
+</div>
+
+<div class="container">
+	<div class="row text-center" style=" display:flex; flex-wrap:wrap;">
+		<%parsedData["Search"].forEach(function(data){ %>
+		<div class="col-md-4">
+			<div class="thumbnail">
+			  <img src="<%= data["Poster"] %>">
+			  <div class="card-body">
+				<p class="card-text"><li> <strong><%= data["Title"]%></strong> - <%=data["Year"] %></p>
+			  </div>
+			</div>
+		</div>
+		<% }); %>
+	
+	</div>
+	</div>
+<%-include("../partials/bootstrap4footer")%>

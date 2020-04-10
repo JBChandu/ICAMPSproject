@@ -1,0 +1,46 @@
+/* body {
+  background-color: #000;
+	background-image:url(https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+	background-size: cover;
+	  background-repeat: no-repeat;
+} */
+
+/* #landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+ */
+/* #landing-header h1 {
+  color: #fff;
+} */
+
+/* .slideshow { 
+	  position: absolute;
+	  width: 100%;
+	  height: 100%;
+	  top: 0;
+	  left: 0;
+	  z-index: 0;
+	  list-style: none;
+	  margin: 0;
+	  padding: 0;
+	  background-size: cover;
+	  background-position: 50% 50%;
+	  background-repeat: no-repeat;
+} */
+
+
+
+/* .container{
+	 background-size: cover;
+	 background-repeat: no-repeat;
+} */
+
+
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+/* .no-cssanimations .slideshow li {
+	opacity: 1;
+} */
